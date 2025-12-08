@@ -1,23 +1,38 @@
 <!DOCTYPE html>
 <html lang="ja">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>personal diary</title>
+        <link rel="stylesheet" href="diary.css">
+        <script src="diary.js" defer></script> </head>
+  </head>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="theme-color" content="#000000">
-  <script type="text/javascript" src="modules/lodash.min.js"></script>
-  <script type="text/javascript" src="modules/test-boilerplate.js"></script>
-  <script type="text/javascript" src="script.js"></script>
-</head>
-
-<body>
-  <h1>DIG プログラミング基礎へようこそ！</h1>
-  <h2>Mac をお使いの方は、 <font color="blue"> Cmd + Option + J</font><br>
-    Windows/Linux をお使いの方は、 <font color="blue"> Control+Shift+J</font> <br>
-    をクリックして、デベロッパーツールを開いてください。</h2>
-  <h2>下記にユニコーンの画像が表示されていれば成功です！</h2>
-  <img src="https://cdn.dribbble.com/users/1281272/screenshots/4515441/unicorn.gif">
-  <h3>30分悩んで進まなくなったら…helpチャンネルで質問してみましょう！</h3>
-</body>
-
-</html>
+  <body>
+    <h1>
+        "まっちー"の 思い出の記録
+    </h1>
+    <div class = "registration-box">
+      <div class="input-forms">
+        <form id="memoryForm" class="card">
+          <div class="form-section date-upload">
+            <label for="dateOfPicture">写真の日付 : </label>
+            <input type="date" id="dateOfPicture">
+            <label for="memoryOfPicture">載せたい写真を選んでください : </label>
+            <input type="file" id="memoryOfPicture" accept="image/*">
+          </div>
+          <div class="form-section title-memo">
+            <label for="sub-title">題名 : </label>
+            <input type="text" id="sub-title">
+            <label for="memories">登録内容 : </label>
+            <textarea id="memories" rows="5" cols="80"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="registration-button-area">
+        <input id="registration-button" type="button" value="　登録　" >
+      </div>
+    </div>
+    <div id="display-area"></div>
+  </body>
+  </html>
